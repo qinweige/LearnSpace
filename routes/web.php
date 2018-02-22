@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hsk', function () {
-    return view('hsk.frontpage');
-});
+Route::get('/hsk', function () { return view('hsk.frontpage'); });
+Route::get('/hsk/trial', function () { return view('hsk.trial'); });
+
+Route::post('/hsk/trial/email', 'sendEmail@trial');

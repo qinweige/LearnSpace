@@ -17,27 +17,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png">
+    <link rel="shortcut icon" href="{{ URL::asset('assets/img/favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ URL::asset('assets/img/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ URL::asset('assets/img/apple-touch-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ URL::asset('assets/img/apple-touch-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ URL::asset('assets/img/apple-touch-icon-144x144.png') }}">
 
     <!-- Google Webfonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/js/owl-carousel/owl.carousel.css" />
-    <link rel="stylesheet" href="/js/owl-carousel/owl.theme.css" />
-    <link rel="stylesheet" href="css/flexslider.css"/>
-    <link rel="stylesheet" href="css/prettyphoto.css"/>
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/js/owl-carousel/owl.carousel.css') }}" />
+    <link rel="stylesheet" href="{{ URL::asset('assets/js/owl-carousel/owl.theme.css') }}" />
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/flexslider.css') }}"/>
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/prettyphoto.css') }}"/>
 
     <!-- Add custom CSS here -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="{{ URL::asset('assets/css/custom.css') }}" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="./js/html5shiv.js"></script>
@@ -77,7 +77,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
-                <li><a href="/cdn-cgi/l/email-protection#11787f777e51667473627865743f727e7c">Contact</a></li>
+                <li><a href="{{ URL::asset('assets//cdn-cgi/l/email-protection#5b373e3a29353328301b3c363a323775383436') }}">Contact</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -98,8 +98,8 @@
                     <br>
                     <p>We provide the professional HSK training. The best professional teacher with over 6 years experience! </p>
                     <ul class="list-inline top-buttons">
-                        <li><a href="#"><button class="btn1 btn-7 btn-7a"><i class="fa fa-inbox"></i> Interested! </button></a></li>
-                        <li><a href="#" class="lmore"><i class="fa fa-arrow-circle-o-right fa-fw"></i> <span>Learn More</span></a></li>
+                        <li><a href="{{ url('hsk/trial') }}"><button class="btn1 btn-7 btn-7a"><i class="fa fa-inbox"></i>Trial Lesson</button></a></li>
+                        <li><a href="#" class="lmore"><i class="fa fa-arrow-circle-o-right fa-fw"></i> <span>Learn Space</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -196,7 +196,7 @@
             <!-- Carousel -->
             <div id="owl-example" class="owl-carousel">
                 <div class="item col-lg-12">
-                    <a href="demo/sshots/1.jpg" class="prettyPhoto">
+                    <a href="{{ URL::asset('assets/demo/sshots/1.jpg" class="prettyPhoto') }}">
                         <div class="shot-wrap">
                             <img class="img-responsive" src="demo/sshots/1.jpg" alt="">
                             <div class="shot-img"></div>
@@ -204,7 +204,7 @@
                     </a>
                 </div>
                 <div class="item col-lg-12">
-                    <a href="demo/sshots/2.jpg" class="prettyPhoto">
+                    <a href="{{ URL::asset('assets/demo/sshots/2.jpg" class="prettyPhoto') }}">
                         <div class="shot-wrap">
                             <img class="img-responsive" src="demo/sshots/2.jpg" alt="">
                             <div class="shot-img"></div>
@@ -212,7 +212,7 @@
                     </a>
                 </div>
                 <div class="item col-lg-12">
-                    <a href="demo/sshots/3.jpg" class="prettyPhoto">
+                    <a href="{{ URL::asset('assets/demo/sshots/3.jpg" class="prettyPhoto') }}">
                         <div class="shot-wrap">
                             <img class="img-responsive" src="demo/sshots/3.jpg" alt="">
                             <div class="shot-img"></div>
@@ -220,7 +220,7 @@
                     </a>
                 </div>
                 <div class="item col-lg-12">
-                    <a href="demo/sshots/1.jpg" class="prettyPhoto">
+                    <a href="{{ URL::asset('assets/demo/sshots/1.jpg" class="prettyPhoto') }}">
                         <div class="shot-wrap">
                             <img class="img-responsive" src="demo/sshots/1.jpg" alt="">
                             <div class="shot-img"></div>
@@ -228,7 +228,7 @@
                     </a>
                 </div>
                 <div class="item col-lg-12">
-                    <a href="demo/sshots/2.jpg" class="prettyPhoto">
+                    <a href="{{ URL::asset('assets/demo/sshots/2.jpg" class="prettyPhoto') }}">
                         <div class="shot-wrap">
                             <img class="img-responsive" src="demo/sshots/2.jpg" alt="">
                             <div class="shot-img"></div>
@@ -236,7 +236,7 @@
                     </a>
                 </div>
                 <div class="item col-lg-12">
-                    <a href="demo/sshots/3.jpg" class="prettyPhoto">
+                    <a href="{{ URL::asset('assets/demo/sshots/3.jpg" class="prettyPhoto') }}">
                         <div class="shot-wrap">
                             <img class="img-responsive" src="demo/sshots/3.jpg" alt="">
                             <div class="shot-img"></div>
@@ -357,7 +357,7 @@
                     <li>&sdot;</li>
                     <li><a href="#">About</a></li>
                     <li>&sdot;</li>
-                    <li><a href="/cdn-cgi/l/email-protection#660f08000926110304150f12034805090b">Contact</a></li>
+                    <li><a href="{{ URL::asset('assets//cdn-cgi/l/email-protection#5b373e3a29353328301b3c363a323775383436') }}">Contact</a></li>
                 </ul>
                 <p class="copyright text-center medium">Copyright &copy; <a href="https://theme.express">LEARNHSK</a> 2018. All Rights Reserved</p>
             </div>
@@ -367,15 +367,15 @@
 <!-- Footer Content -->
 
 <!-- JavaScript -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/d07b1474/cloudflare-static/email-decode.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="js/jquery.prettyphoto.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/owl-carousel/owl.carousel.js"></script>
-<script src='js/jquery.easing.1.3.js'></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/main.js"></script>
+<script data-cfasync="false" src="{{ URL::asset('assets//cdn-cgi/scripts/d07b1474/cloudflare-static/email-decode.min.js') }}"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{{ URL::asset('assets/js/jquery.prettyphoto.js') }}"></script>
+<script src="{{ URL::asset('assets/js/bootstrap.js') }}"></script>
+<script src="{{ URL::asset('assets/js/owl-carousel/owl.carousel.js') }}"></script>
+<script src="{{ URL::asset('assets/js/jquery.easing.1.3.js') }}"></script>
+<script src="{{ URL::asset('assets/js/jquery.flexslider.js') }}"></script>
+<script src="{{ URL::asset('assets/js/main.js') }}"></script>
 <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
-<script src="js/gmaps.js"></script>
+<script src="{{ URL::asset('assets/js/gmaps.js') }}"></script>
 
 </body>
 </html>
