@@ -70,21 +70,30 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand logo" href="./index.html"><i class="fa fa-pencil-square"></i>LearnHSK</a>
+            <a class="navbar-brand logo" href="{{ url('/hsk') }}"><i class="fa fa-pencil-square"></i>LearnHSK</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="#pricing">Services</a></li>
                 <li><a href="{{ URL::asset('assets//cdn-cgi/l/email-protection#5b373e3a29353328301b3c363a323775383436') }}">Contact</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
+    @if(Session::has('flash_message'))
+        <div class="container">
+            <div class="row">
+                <div class="alert alert-success"><em> {!! session('flash_message') !!}</em></div>
+            </div>
+        </div>
+    @endif
     <!-- /.container -->
 </nav>
 <!-- Header -->
+
+
 
 <!-- top Content -->
 <div class="top-header">
@@ -127,7 +136,7 @@
                 <h2>The best place to learn Mandarin & HSK </h2>
                 <p>Welcome for all levels of learners who are interested in mandarin</p>
                 <div class="cl-effect-2 btn2">
-                    <a href="#"><span data-hover="Why not?">Check more features</span></a>
+                    <a href="{{ url('hsk/join') }}"><span data-hover="Click to join us!">Why not?</span></a>
                 </div>
                 <hr>
             </div>
@@ -162,18 +171,24 @@
             </div>
 
             <!-- Service - 3 -->
-            <div class="col-lg-3 text-center">
-                <div class="service-item">
-                    <i class="service-icon fa fa-code"></i>
-                    <h4>Fees and schedule</h4>
-                    <p></p>
+
+                <div class="col-lg-3 text-center">
+                    <div class="service-item">
+                        <a href='#pricing'>
+                        <i class="service-icon fa fa-code"></i>
+                        </a>
+                        <h4>Fees and schedule</h4>
+                        <p></p>
+                    </div>
                 </div>
-            </div>
+
 
             <!-- Service - 4 -->
             <div class="col-lg-3 text-center">
                 <div class="service-item">
+                    <a href="hsk/trial">
                     <i class="service-icon fa fa-users"></i>
+                    </a>
                     <h4>Trial class</h4>
                     <p></p>
                 </div>
@@ -183,76 +198,40 @@
     </div>
 </div>
 <!-- Services -->
-
-<!-- Screenshots -->
-<div class="section">
-    <div class="container sshots">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Galary of student</h2>
-                <br>
-            </div>
-
-            <!-- Carousel -->
-            <div id="owl-example" class="owl-carousel">
-                <div class="item col-lg-12">
-                    <a href="{{ URL::asset('assets/demo/sshots/1.jpg" class="prettyPhoto') }}">
-                        <div class="shot-wrap">
-                            <img class="img-responsive" src="demo/sshots/1.jpg" alt="">
-                            <div class="shot-img"></div>
-                        </div>
-                    </a>
-                </div>
-                <div class="item col-lg-12">
-                    <a href="{{ URL::asset('assets/demo/sshots/2.jpg" class="prettyPhoto') }}">
-                        <div class="shot-wrap">
-                            <img class="img-responsive" src="demo/sshots/2.jpg" alt="">
-                            <div class="shot-img"></div>
-                        </div>
-                    </a>
-                </div>
-                <div class="item col-lg-12">
-                    <a href="{{ URL::asset('assets/demo/sshots/3.jpg" class="prettyPhoto') }}">
-                        <div class="shot-wrap">
-                            <img class="img-responsive" src="demo/sshots/3.jpg" alt="">
-                            <div class="shot-img"></div>
-                        </div>
-                    </a>
-                </div>
-                <div class="item col-lg-12">
-                    <a href="{{ URL::asset('assets/demo/sshots/1.jpg" class="prettyPhoto') }}">
-                        <div class="shot-wrap">
-                            <img class="img-responsive" src="demo/sshots/1.jpg" alt="">
-                            <div class="shot-img"></div>
-                        </div>
-                    </a>
-                </div>
-                <div class="item col-lg-12">
-                    <a href="{{ URL::asset('assets/demo/sshots/2.jpg" class="prettyPhoto') }}">
-                        <div class="shot-wrap">
-                            <img class="img-responsive" src="demo/sshots/2.jpg" alt="">
-                            <div class="shot-img"></div>
-                        </div>
-                    </a>
-                </div>
-                <div class="item col-lg-12">
-                    <a href="{{ URL::asset('assets/demo/sshots/3.jpg" class="prettyPhoto') }}">
-                        <div class="shot-wrap">
-                            <img class="img-responsive" src="demo/sshots/3.jpg" alt="">
-                            <div class="shot-img"></div>
-                        </div>
-                    </a>
-                </div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2>Online lessons</h2>
+            <button type="button" class="btn btn-success pull-right">More</button>
+            <br>
+        </div>
+        <div class="col-lg-3">
+            <h2>Lesson 1</h2>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="//www.youtube.com/embed/ePbKGoIGAXY"></iframe>
             </div>
         </div>
-        <!-- /.row -->
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3">
+            <h2>Lesson 2</h2>
+            <div class="embed-responsive embed-responsive-4by3">
+                <iframe class="embed-responsive-item" src="//www.youtube.com/embed/ePbKGoIGAXY"></iframe>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3">
+            <h2>Lesson 3</h2>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="//www.youtube.com/embed/ePbKGoIGAXY"></iframe>
+            </div>
+            <br>
+        </div>
     </div>
-    <!-- /.container -->
 </div>
-<!-- Screenshots -->
+
 
 <!-- Pricing Content -->
-<div class="pricing">
+<div class="pricing" id="pricing">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -275,7 +254,7 @@
                         <li class="list-group-item">group practice</li>
                         <li class="list-group-item">homework</li>
                         <li class="list-group-item">discuss</li>
-                        <li class="list-group-item"><a class="btn btn-primary" href="#">Sign Up Now!</a></li>
+                        <li class="list-group-item"><a class="btn btn-primary" href="{{ url('hsk/join/group') }}">Sign Up Now!</a></li>
                     </ul>
                 </div>
             </div>
@@ -294,7 +273,7 @@
                         <li class="list-group-item">Effective learn</li>
                         <li class="list-group-item">Homework check</li>
                         <li class="list-group-item">Question anytime</li>
-                        <li class="list-group-item"><a class="btn btn-primary" href="#">Sign Up Now!</a></li>
+                        <li class="list-group-item"><a class="btn btn-primary" href="{{ url('hsk/join/individual') }}">Sign Up Now!</a></li>
                     </ul>
                 </div>
             </div>
@@ -313,7 +292,7 @@
                         <li class="list-group-item">Everyone welcome</li>
                         <li class="list-group-item">Beginner level</li>
                         <li class="list-group-item">Total free</li>
-                        <li class="list-group-item"><a class="btn btn-primary" href="#">Sign Up Now!</a></li>
+                        <li class="list-group-item"><a class="btn btn-primary" href="{{ url('hsk/trial')}}">Sign Up Now!</a></li>
                     </ul>
                 </div>
             </div>

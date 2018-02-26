@@ -95,18 +95,24 @@
             <!-- Service - 1 -->
             <div class="col-lg-3 text-center">
                 <div class="service-item">
-                    <h4>Every Saturday</h4>
-                    <h4>6pm - 8pm</h4>
-                    <i class="service-icon fa fa-desktop"></i>
-                    <h4>We will send the skype ID to your email</h4>
+                    <h4>Welcome!</h4>
+                    <i class="service-icon fa fa-rocket"></i>
+                    <h4>Start your learning journey</h4>
                     <p></p>
                 </div>
             </div>
             <div class="col-lg-2"></div>
             <div class="col-lg-6">
-            <div class="row-lg-6"></div>
-                <form id="trial" action="trial/email" method="post">
+                <div class="row-lg-6"></div>
+                <form id="trial" action="join/email" method="post">
                     {{ csrf_field() }}
+                    <div class="form-group">
+                        <label for="type">LESSON TYPE</label>
+                        <select name="type" value="<?php echo $type; ?>" class="form-control">
+                            <option <?php if($type == 'individual')echo 'selected="selected"'; ?> value="individual">Individual Class</option>
+                            <option <?php if($type == 'group')echo 'selected="selected"'; ?> value="group">Group Class</option>
+                        </select>
+                    </div>
                     <div class="form-group">
                         <label for="name">NAME</label>
                         <input id="name" name="name" type="text" maxlength="20"  class="form-control" required placeholder="Enter your name"/>
@@ -114,6 +120,10 @@
                     <div class="form-group">
                         <label for="email" class="padding-lg">EMAIL</label>
                         <input id="email" name="email" type="email" maxlength="40" required class="form-control" placeholder="Enter your email"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="information" class="padding-lg">INFORMATION</label>
+                        <textarea id="information" name="information" type="text" row="4" maxlength="4000" required class="form-control" placeholder="Enter your detail"></textarea>
                     </div>
                     <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> submit </button>
                 </form>
